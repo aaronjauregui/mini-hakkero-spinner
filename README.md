@@ -1,11 +1,16 @@
 # mini-hakkero-spinner
 
+![The Mini-Hakkero spinning, rendered in sextants at the default 36x18 cells](demo.gif)
+
 A terminal spinner PoC: Marisa's Mini-Hakkero, spinning.
 
-It isn't ASCII art. Each frame is shaded per pixel from vector geometry and
-printed with block glyphs, so one text cell carries a grid of subpixels — the
-lit ones in the foreground color, the rest in the background. Two colors per
-cell is the hard limit the terminal gives us.
+Each frame is shaded per pixel from vector geometry and printed with block glyphs, so one text cell carries a grid of subpixels — the lit ones in the foreground color, the rest in the background. Two colors per cell is the hard limit the terminal gives us.
+
+```sh
+go install github.com/aaronjauregui/mini-hakkero-spinner@latest
+```
+
+From a clone:
 
 ```sh
 go run .                       # auto: sixel if the terminal has it, else sextants
@@ -123,3 +128,13 @@ given width carry the detail of half blocks at twice it, and the design holds
 together down to about 24 — below that the trigram bars are thinner than a
 subpixel and collapse into noise, while the yin-yang survives a little further.
 `setSize` in `raster.go` changes the default.
+
+## Credits
+
+The Mini-Hakkero and Marisa Kirisame are from the Touhou Project by ZUN (Team
+Shanghai Alice). This is an unofficial, non-commercial fan work, made under
+ZUN's guidelines for fan creations.
+
+## License
+
+[MIT](LICENSE)

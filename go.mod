@@ -1,4 +1,4 @@
-module hakkero
+module github.com/aaronjauregui/mini-hakkero-spinner
 
 go 1.25.0
 

@@ -117,7 +117,7 @@ func sixelImage(t float64, w, h int) *image.RGBA {
 					sum = sum.add(c)
 				}
 			}
-			// SetNRGBA, not Set: Set boxes a color per pixel, which at this
+			// SetRGBA, not Set: Set boxes a color per pixel, which at this
 			// resolution is hundreds of thousands of allocations a frame.
 			img.SetRGBA(x, y, sum.scale(1/float64(sixelSamples*sixelSamples)).rgba())
 		}
